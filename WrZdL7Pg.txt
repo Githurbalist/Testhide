@@ -1,0 +1,449 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://apps7.unep.org/carbonemissions//static/css/styles.css">
+    <link rel="stylesheet" href="https://apps7.unep.org/carbonemissions//static/css/responsiveness.css">
+    <link rel="shortcut icon" href="https://apps7.unep.org/carbonemissions//static/img/logoMain.png">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    
+    <style >[wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid], [wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short], [wire\:loading\.delay\.long], [wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest] {display:none;}[wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {animation-duration: 50000s;animation-name: livewireautofill;}@keyframes livewireautofill { from {} }</style>
+
+</head>
+
+<body>
+
+<style>
+        h6 {color: #0096FF;}
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-transparent">
+            <div class="container-fluid">
+                <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+                <img src="https://apps7.unep.org/carbonemissions//static/img/unpelogo.png" alt="" width="100" height="80">
+                <h6 class="m-3"><strong>CARBON CALCULATOR </strong></h6>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+</nav>
+    <div class="container">
+                 <div wire:id="AE4cT5I0k5q9KjZE61wC" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;AE4cT5I0k5q9KjZE61wC&quot;,&quot;name&quot;:&quot;calc-home&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;\/&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;bb64122b&quot;,&quot;data&quot;:{&quot;roundtripFlights&quot;:&quot;0&quot;,&quot;countries&quot;:[],&quot;flights&quot;:[],&quot;name&quot;:null,&quot;country_select&quot;:&quot;0&quot;,&quot;renewable_energy&quot;:null,&quot;flight_class&quot;:&quot;0&quot;,&quot;sectiontwo_output&quot;:&quot;0&quot;,&quot;kilometers&quot;:[],&quot;kms_covered&quot;:null,&quot;electric_vehicle&quot;:null},&quot;dataMeta&quot;:{&quot;modelCollections&quot;:{&quot;countries&quot;:{&quot;class&quot;:&quot;App\\Models\\Countries&quot;,&quot;id&quot;:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181],&quot;relations&quot;:[],&quot;connection&quot;:&quot;mysql&quot;},&quot;flights&quot;:{&quot;class&quot;:&quot;App\\Models\\Flights&quot;,&quot;id&quot;:[1,2,3,4],&quot;relations&quot;:[],&quot;connection&quot;:&quot;mysql&quot;},&quot;kilometers&quot;:{&quot;class&quot;:&quot;App\\Models\\Kilometers&quot;,&quot;id&quot;:[1,2,3,4,5,6],&quot;relations&quot;:[],&quot;connection&quot;:&quot;mysql&quot;}}},&quot;checksum&quot;:&quot;22fe06d5ac1e394c7cea97c4d98a1954a55f4887ca77ba9bb4837dec28a60060&quot;}}">
+
+<style>
+h3 {
+text-align: center;
+display: block;
+letter-spacing: 2px;
+padding-top: 30px;
+
+}
+legend{
+display: block;
+letter-spacing: 4px;
+padding-top: 30px;    
+}
+
+label,h5 {
+
+letter-spacing: 1px;
+padding-top: 30px;
+
+}
+
+</style>
+
+<h3 >UNEP Personal Individual Carbon Footprint</h3>
+        <form wire:submit.prevent="submit">
+        <input type="hidden" name="_token" value="I4hvb7HKoiLEO7ymtJyxegJreml36dEkYs8rPCXC">            <fieldset class="border border-secondary p-1"  >
+                <legend class="float-none w-auto p-1" >Work Related Facilities Footprint</legend>
+                <!-- List of countries -->
+                <div class="row" >
+                    <div class="col-7" >
+                    <div class="form-control form-control-lg" style="background:white" onmouseover="this.style.background='#89CFF0';" onmouseout="this.style.background='white';">
+                      <label>What country are you located in?</label>
+                        <select wire:model="country_select" class="custom-select custom-select-lg mb-3">
+                            <option value="0" selected>Choose Country</option> 
+                                                        <option value="2.82">Afghanistan </option>
+                                                        <option value="0.66">Albania </option>
+                                                        <option value="1.52">Algeria </option>
+                                                        <option value="3.10">Angola </option>
+                                                        <option value="0.75">Argentina </option>
+                                                        <option value="0.32">Armenia </option>
+                                                        <option value="1.37">Australia </option>
+                                                        <option value="1.80">Austria </option>
+                                                        <option value="1.31">Azerbaijan </option>
+                                                        <option value="14.91">Bahrain </option>
+                                                        <option value="0.86">Bangladesh </option>
+                                                        <option value="1.08">Barbados </option>
+                                                        <option value="0.34">Belarus </option>
+                                                        <option value="0.32">Belgium </option>
+                                                        <option value="0.59">Belize </option>
+                                                        <option value="3.94">Benin </option>
+                                                        <option value="2.16">Bhutan </option>
+                                                        <option value="0.34">Bolivia </option>
+                                                        <option value="0.84">Bosnia-Herzegovina </option>
+                                                        <option value="2.46">Botswana </option>
+                                                        <option value="0.44">Brazil </option>
+                                                        <option value="1.48">Bulgaria </option>
+                                                        <option value="2.67">BurkinaFaso </option>
+                                                        <option value="0.97">Burundi </option>
+                                                        <option value="1.48">Cambodia </option>
+                                                        <option value="1.52">Cameroon </option>
+                                                        <option value="1.15">Canada </option>
+                                                        <option value="0.56">CapeVerde </option>
+                                                        <option value="2.34">CentralAfricanRepublic </option>
+                                                        <option value="2.11">Chad </option>
+                                                        <option value="1.45">Chile </option>
+                                                        <option value="3.60">China </option>
+                                                        <option value="0.04">Colombia </option>
+                                                        <option value="0.41">Comoros </option>
+                                                        <option value="6.01">Congo </option>
+                                                        <option value="0.02">CostaRica </option>
+                                                        <option value="1.27">Côte-d&#039;Ivoire </option>
+                                                        <option value="2.77">Croatia </option>
+                                                        <option value="1.17">Cuba </option>
+                                                        <option value="3.53">Cyprus </option>
+                                                        <option value="1.21">CzechRepublic </option>
+                                                        <option value="2.68">DemocraticRepublicofCongo </option>
+                                                        <option value="0.61">Denmark </option>
+                                                        <option value="14.08">Djibouti </option>
+                                                        <option value="0.20">Dominica </option>
+                                                        <option value="0.82">DominicanRepublic </option>
+                                                        <option value="0.18">Ecuador </option>
+                                                        <option value="1.42">Egypt </option>
+                                                        <option value="0.34">ElSalvador </option>
+                                                        <option value="1.24">EquatorialGuinea </option>
+                                                        <option value="0.83">Eritrea </option>
+                                                        <option value="1.42">Estonia </option>
+                                                        <option value="1.17">Eswatini </option>
+                                                        <option value="0.67">Ethiopia </option>
+                                                        <option value="1.82">Fiji </option>
+                                                        <option value="0.29">Finland </option>
+                                                        <option value="0.94">France </option>
+                                                        <option value="1.86">Gabon </option>
+                                                        <option value="1.31">Gambia </option>
+                                                        <option value="0.38">Georgia </option>
+                                                        <option value="0.69">Germany </option>
+                                                        <option value="0.87">Ghana </option>
+                                                        <option value="0.84">Global </option>
+                                                        <option value="1.11">Greece </option>
+                                                        <option value="0.37">Guatemala </option>
+                                                        <option value="1.48">Guinea </option>
+                                                        <option value="1.90">Guinea-Bissau </option>
+                                                        <option value="14.13">Guyana </option>
+                                                        <option value="2.83">Haiti </option>
+                                                        <option value="0.25">Honduras </option>
+                                                        <option value="0.94">HongKongChina </option>
+                                                        <option value="0.46">Hungary </option>
+                                                        <option value="2.31">India </option>
+                                                        <option value="1.04">Indonesia </option>
+                                                        <option value="1.72">Iran </option>
+                                                        <option value="1.10">Iraq </option>
+                                                        <option value="1.02">Ireland </option>
+                                                        <option value="1.56">Israel </option>
+                                                        <option value="0.77">Italy </option>
+                                                        <option value="0.28">Jamaica </option>
+                                                        <option value="4.50">Japan </option>
+                                                        <option value="1.22">Jordan </option>
+                                                        <option value="4.73">Kazakhstan </option>
+                                                        <option value="1.19">Kenya </option>
+                                                        <option value="4.48">Kosovo </option>
+                                                        <option value="5.67">Kuwait </option>
+                                                        <option value="0.07">Kyrgyzstan </option>
+                                                        <option value="0.52">LaoPDR </option>
+                                                        <option value="0.13">Latvia </option>
+                                                        <option value="6.55">Lebanon </option>
+                                                        <option value="1.68">Lesotho </option>
+                                                        <option value="8.16">Liberia </option>
+                                                        <option value="3.33">Libya </option>
+                                                        <option value="0.13">Lithuania </option>
+                                                        <option value="0.66">Madagascar </option>
+                                                        <option value="0.50">Malawi </option>
+                                                        <option value="0.83">Malaysia </option>
+                                                        <option value="6.31">Maldives </option>
+                                                        <option value="1.08">Mali </option>
+                                                        <option value="0.29">Malta </option>
+                                                        <option value="1.42">MarshallIslands </option>
+                                                        <option value="0.55">Mauritania </option>
+                                                        <option value="0.48">Mauritius </option>
+                                                        <option value="0.54">Mexico </option>
+                                                        <option value="1.95">Micronesia </option>
+                                                        <option value="0.62">Moldova </option>
+                                                        <option value="58.99">Monaco </option>
+                                                        <option value="1.28">Mongolia </option>
+                                                        <option value="1.01">Montenegro </option>
+                                                        <option value="1.30">Morocco </option>
+                                                        <option value="0.33">Mozambique </option>
+                                                        <option value="1.81">Myanmar </option>
+                                                        <option value="0.16">Namibia </option>
+                                                        <option value="0.18">Nepal </option>
+                                                        <option value="0.95">Netherlands </option>
+                                                        <option value="0.52">Nicaragua </option>
+                                                        <option value="1.56">Niger </option>
+                                                        <option value="8.03">Nigeria </option>
+                                                        <option value="0.78">NorthKorea </option>
+                                                        <option value="1.10">NorthMacedonia </option>
+                                                        <option value="0.03">Norway </option>
+                                                        <option value="4.48">Oman </option>
+                                                        <option value="2.55">Pakistan </option>
+                                                        <option value="1.75">Palestine </option>
+                                                        <option value="0.70">Panama </option>
+                                                        <option value="1.04">PapuaNewGuinea </option>
+                                                        <option value="0.12">Paraguay </option>
+                                                        <option value="0.56">Peru </option>
+                                                        <option value="1.31">Philippines </option>
+                                                        <option value="1.20">Poland </option>
+                                                        <option value="1.17">Portugal </option>
+                                                        <option value="3.36">Qatar </option>
+                                                        <option value="0.62">Romania </option>
+                                                        <option value="3.62">Russia </option>
+                                                        <option value="0.71">Rwanda </option>
+                                                        <option value="19.72">Samoa </option>
+                                                        <option value="0.97">SaoTomeandPrincipe </option>
+                                                        <option value="2.62">SaudiArabia </option>
+                                                        <option value="1.60">Senegal </option>
+                                                        <option value="0.95">Serbia </option>
+                                                        <option value="0.55">Seychelles </option>
+                                                        <option value="3.16">SierraLeone </option>
+                                                        <option value="9.38">Singapore </option>
+                                                        <option value="0.20">SlovakRepublic </option>
+                                                        <option value="0.77">Slovenia </option>
+                                                        <option value="0.16">SolomonIslands </option>
+                                                        <option value="1.18">Somalia </option>
+                                                        <option value="2.20">SouthAfrica </option>
+                                                        <option value="1.74">SouthKorea </option>
+                                                        <option value="6.34">SouthSudan </option>
+                                                        <option value="0.82">Spain </option>
+                                                        <option value="0.86">SriLanka </option>
+                                                        <option value="2.55">Sudan </option>
+                                                        <option value="0.69">Suriname </option>
+                                                        <option value="0.63">Swaziland </option>
+                                                        <option value="1.07">Switzerland </option>
+                                                        <option value="2.81">Syria </option>
+                                                        <option value="0.51">Tajikistan </option>
+                                                        <option value="1.56">Tanzania </option>
+                                                        <option value="1.94">Thailand </option>
+                                                        <option value="0.48">Timor-Leste </option>
+                                                        <option value="1.11">Togo </option>
+                                                        <option value="5.07">TrinidadandTobago </option>
+                                                        <option value="0.61">Tunisia </option>
+                                                        <option value="0.74">Turkey </option>
+                                                        <option value="9.12">Turkmenistan </option>
+                                                        <option value="1.32">Uganda </option>
+                                                        <option value="0.84">Ukraine </option>
+                                                        <option value="0.32">UnitedArabEmirates </option>
+                                                        <option value="0.99">UnitedKingdom </option>
+                                                        <option value="2.66">UnitedStates </option>
+                                                        <option value="0.08">Uruguay </option>
+                                                        <option value="2.16">Uzbekistan </option>
+                                                        <option value="0.72">Vanuatu </option>
+                                                        <option value="0.82">Venezuela </option>
+                                                        <option value="1.15">Vietnam </option>
+                                                        <option value="1.09">WestBankandGazaStrip </option>
+                                                        <option value="0.66">Yemen </option>
+                                                        <option value="0.83">Zambia </option>
+                                                        <option value="1.86">Zimbabwe </option>
+                                                        <option value="1.83">WorldAverage </option>
+                             
+                        </select> 
+                         
+ 
+                        <br>  
+                    </div><br>
+                      
+                        <!-- Options for renewableEnergy 
+                        These depend on which country is chosen above -->
+                        <div class="form-control form-control-lg" style="background:white" onmouseover="this.style.background='#89CFF0';" onmouseout="this.style.background='white';">
+                         <label>Does your office use renewable energy?</label>
+                        <select wire:model="renewable_energy" class="custom-select custom-select-lg mb-3">
+                            <option value="0" selected="selected">Choose option</option> 
+                            <option value="0">yes-100%</option>
+                            <option value="0">yes-partially</option>
+                            <option value="0">no</option>
+                            <option value="0">don't know</option>
+                            
+                        </select> 
+                        
+                        </div>
+                       
+                    </div>
+                    <div class="col-5">
+                        
+                        <div class="form-control form-control-lg" style="background:white" onmouseover="this.style.background='#89CFF0';" onmouseout="this.style.background='white';">
+                         <h5>Your work-related facilities footprint is  <output>&nbsp;&nbsp;0</output>&nbsp;tonnes CO2eq per year.</h5>
+                        </div>
+                       
+                    </div>
+    
+                </div>
+            </fieldset>
+    
+            <fieldset class="border border-secondary p-1">
+                <legend class="float-none w-auto p-1">Work-Related Air Travel Footprint</legend>
+                <!-- Options for roundtripFlights -->
+                <div class="row">
+                    <div class="col-7 ">
+                    <div class="form-control form-control-lg" style="background:white" onmouseover="this.style.background='#89CFF0';" onmouseout="this.style.background='white';">
+                     <label for="roundtripFlights">How many work related round trip
+                            flights do you take per year?
+                        </label>
+                     <div class="form-group">
+                    <input type="number" class="form-control form-control-lg" wire:model.lazy="roundtripFlights" min="0">
+                        </div>
+                    </div>
+                    <br>
+            
+                        <!-- Options for the type of class for flights -->
+                        <div class="form-control form-control-lg" style="background:white" onmouseover="this.style.background='#89CFF0';" onmouseout="this.style.background='white';">
+                         <label>Which class do you typically fly in?
+                        </label>
+                        <select wire:model="flight_class">
+                        <option value="0" selected="true">Choose flight Class</option> 
+                                                                                    <option value="2.00">I always fly business</option>
+                                                                                   <option value="1.50">I mostly fly business</option>
+                                                                                   <option value="1.25">I mostly fly economy</option>
+                                                                                   <option value="1.00">I always fly economy</option>
+                            
+                            
+                        </select>
+
+                        </div>
+                       
+                       
+                    </div>
+                    <div class="col-5">
+                    <div class="form-control form-control-lg " style="background:white" onmouseover="this.style.background='#89CFF0';" onmouseout="this.style.background='white';">
+                    <h5>Your work-related air travel footprint is<output>&nbsp;&nbsp; 0&nbsp;&nbsp;</output>tonnes CO2eq per year.</h5>
+                    </div>
+                        
+                    </div>
+
+                </div>
+               
+            </fieldset>
+    
+            <fieldset class="border border-secondary p-1">
+                <legend class="float-none w-auto p-1">Work-Related Vehicles Footprint</legend>
+                <!-- Options for kilometers driven -->
+                <div class="row">
+                    <div class="col-7">
+                    <div class="form-control form-control-lg" style="background:white" onmouseover="this.style.background='#89CFF0';" onmouseout="this.style.background='white';">
+                     <label>How many km do you drive or are driven
+                            in a UN vehicle every year?
+                        </label>
+                        <select wire:model="kms_covered">
+                            <option value="0" selected>Choose kilometers</option>
+                               
+                            <option value="0">never_drive
+                            </option>
+                               
+                            <option value="100">less_than_100km
+                            </option>
+                               
+                            <option value="300">100_to_500km
+                            </option>
+                               
+                            <option value="750">500_to_1000km
+                            </option>
+                               
+                            <option value="1500">1000_to_2000km
+                            </option>
+                               
+                            <option value="3000">morethan_2000km
+                            </option>
+                                                    </select>
+                    </div>
+                    <br><br>
+            
+                        <!-- Options for driving an electric vehicle -->
+                        <div  class="form-control form-control-lg" style="background:white" onmouseover="this.style.background='#89CFF0';" onmouseout="this.style.background='white';">
+                         <label>Do you drive an electric vehicle?
+                        </label>
+                        <select wire:model="electric_vehicle">
+                            <option value="0" selected>Choose Option</option>   
+                            <option value="0">No</option>
+                            <option value="0">Fully electric</option>
+                            <option value="0">A hybrid Vehicle</option>
+                        </select>
+                        
+                        <p><i>*Note: If you are a UN driver, do not include distance travelled
+                            for driving colleagues, <br>Only include distance you travel
+                            by yourself and your own work purposes.</i>
+                        </p>
+                        </div>
+                       
+                    </div>
+                    <div class="col-5">
+                     <div class="form-control form-control-lg " style="background:white" onmouseover="this.style.background='#89CFF0';" onmouseout="this.style.background='white';">
+                     <h5>Your work-related vehicles footprint is<output>&nbsp;&nbsp; 0&nbsp;&nbsp;</output>tonnes CO2eq per year.</h5>
+                     </div>
+                            
+                    </div>
+
+                </div>
+            </fieldset>
+    
+            <fieldset class="border border-secondary p-1">
+                <legend class="float-none w-auto p-1">Work-Related Carbon Footprint</legend>
+                <div class="row">
+                     <!-- carbonNeutral attribute for UNEP -->
+                    <div class="col-7">
+                    <div class="form-control form-control-lg" style="background:white" onmouseover="this.style.background='#89CFF0';" onmouseout="this.style.background='white';">
+                     <label for="carbonNeutral">Is UNEP Carbon Neutral?</label>
+                        <select id="carbonNeutral" name="carbonNeutral">
+                            <option selected="true" disabled="disabled">Yes</option>   
+                        </select>
+
+                    </div>
+                       
+                    </div>
+                    <div class="col-5">
+                    <div class="form-control form-control-lg"style="background:white" onmouseover="this.style.background='#89CFF0';" onmouseout="this.style.background='white';">
+                     <h5>Your work-related carbon footprint is<output>&nbsp;&nbsp; 0&nbsp;&nbsp;</output>tonnes CO2eq per year.</h5>
+                    </div>
+                       <div class="form-control form-control-lg" style="background:white" onmouseover="this.style.background='#89CFF0';" onmouseout="this.style.background='white';">
+                        <p><i>An equivalent amount of carbon offsets has been purchased by UNEP so that 
+                            your work-related net carbon footprint  is ZERO.
+                             However, it should be kept in mind that offsetting
+                              does not replace the need to actively reduce.</i></p> 
+                       </div>
+                       
+                    </div>
+
+                </div>
+               
+            </fieldset>
+    
+        </form>
+
+</div>
+
+
+<!-- Livewire Component wire-end:AE4cT5I0k5q9KjZE61wC -->
+    </div>
+
+    <script src="https://apps7.unep.org/carbonemissions//../public/vendor/livewire/livewire.js"></script>
+      
+
+<script src="/carbonemissions/vendor/livewire/livewire.js?id=de3fca26689cb5a39af4" data-turbo-eval="false" data-turbolinks-eval="false" ></script><script data-turbo-eval="false" data-turbolinks-eval="false" >window.livewire = new Livewire();window.Livewire = window.livewire;window.livewire_app_url = '/carbonemissions';window.livewire_token = 'I4hvb7HKoiLEO7ymtJyxegJreml36dEkYs8rPCXC';window.deferLoadingAlpine = function (callback) {window.addEventListener('livewire:load', function () {callback();});};let started = false;window.addEventListener('alpine:initializing', function () {if (! started) {window.livewire.start();started = true;}});document.addEventListener("DOMContentLoaded", function () {if (! started) {window.livewire.start();started = true;}});</script>
+    
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous">
+    </script>
+
+</body>
+
+<footer>
+            <p>Powered by ESS</p>
+    
+</footer></html>
